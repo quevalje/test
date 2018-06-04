@@ -1,7 +1,10 @@
-void setBuildStatus(String message, String state) {
-  step([
-      sh 'echo "COuCou Jean"'
-  ]);
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
 }
-
-setBuildStatus("Build complete", "SUCCESS");
